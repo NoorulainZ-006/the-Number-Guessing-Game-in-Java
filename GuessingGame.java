@@ -25,13 +25,14 @@ public class GuessingGame {
                 if (attempts == 0) {
                     break;
                 }
-                System.out.print("Do you want any hint (attmpts?? (yes/no): ");
+                System.out.print("Do you want any hint (yes/no): ");
                 String choice = input.next().toLowerCase();
                 if (choice.equals("yes")) {
                     System.out.println("The number lies in " + tens + " 's..");
                     attempts = attempts - 1;
                     System.out.println("Now you have " + attempts + " left....");
-                    continue;
+                    System.out.println();
+                  
                 } else {
                     System.out.println("Okay try to think much greater number.. you have " + attempts + " attempts");
                     System.out.println();
@@ -43,12 +44,13 @@ public class GuessingGame {
                 if (attempts == 0) {
                     break;
                 }
-                System.out.print("Do you want any hint (attmpts?? (yes/no): ");
+                System.out.print("Do you want any hint (yes/no): ");
                 String choice = input.next().toLowerCase();
                 if (choice.equals("yes")) {
                     System.out.println("The number lies in " + tens + " 's..");
                     attempts = attempts - 1;
                     System.out.println("Now you have " + attempts + " left....");
+                    System.out.println();
                 } else {
                     System.out.println("Okay try to think much smaller number.. you have " + attempts + " attempts");
                     System.out.println();
@@ -68,6 +70,7 @@ public class GuessingGame {
                             "You are too close think some smaller one......you have " + attempts + " attempts left");
                     System.out.println();
                 } else {
+                    System.out.println();
                     System.out.println("Congratulations!! You have Guessed the Number....");
                     break;
                 }
@@ -75,7 +78,9 @@ public class GuessingGame {
 
         }
         if (attempts == 0) {
+            System.out.println();
             System.out.println("You lose.... The actual number was : " + RandomNum);
         }
     }
 }
+
